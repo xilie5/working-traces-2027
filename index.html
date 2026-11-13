@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="theme-color" content="#17191a">
+  <title>工作痕跡｜盧偉祺</title>
+  <meta name="description" content="盧偉祺的學習與工作痕跡：從基礎知識到可驗證、可維護的系統。">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="page-shell hero-shell">
+      <div class="topline" aria-label="頁面資訊">
+        <span>WORKING TRACES / 01</span>
+        <span>2027 · 資訊科技崗</span>
+      </div>
+
+      <div class="hero-main">
+        <p class="eyebrow">PERSONAL WORKING NOTES</p>
+        <h1>盧偉祺</h1>
+        <div class="identity-line">
+          <span>中山大學</span>
+          <span>軟件工程</span>
+          <span>2027 屆</span>
+        </div>
+
+        <p class="hero-thesis">
+          我做後端，習慣把「能運行」<br>
+          繼續推進到「可驗證、可維護、能交接」。
+        </p>
+      </div>
+
+      <div class="hero-foot">
+        <p class="hero-note">
+          結果寫在履歷上，<br>
+          學習與工作的過程留在這裡。
+        </p>
+        <a class="scroll-link" href="#learning">
+          閱讀工作痕跡
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-learning" id="learning">
+      <div class="page-shell">
+        <header class="section-heading reveal">
+          <p class="section-number">01 / 學習</p>
+          <div>
+            <p class="section-kicker">BEFORE THE CODE</p>
+            <h2>學習不是把答案抄下來，<br>而是把概念放回系統裡。</h2>
+          </div>
+        </header>
+
+        <div class="notes-archive reveal">
+          <figure class="note-photo note-photo--lead">
+            <img
+              src="./assets/notes-database.jpg"
+              alt="資料庫原理課堂手寫筆記"
+              width="1600"
+              height="1200"
+            >
+            <figcaption>資料庫原理 / 手寫筆記</figcaption>
+          </figure>
+          <figure class="note-photo">
+            <img
+              src="./assets/notes-os.jpg"
+              alt="操作系統課堂手寫筆記"
+              width="1200"
+              height="1600"
+            >
+            <figcaption>操作系統 / 手寫筆記</figcaption>
+          </figure>
+          <figure class="note-photo">
+            <img
+              src="./assets/notes-network.jpg"
+              alt="計算機網絡課堂手寫筆記"
+              width="1200"
+              height="1600"
+            >
+            <figcaption>計算機網絡 / 手寫筆記</figcaption>
+          </figure>
+        </div>
+
+        <div class="trace-list">
+          <article class="trace-row reveal">
+            <p class="trace-index">01</p>
+            <div class="trace-title">
+              <h3>併發的邊界</h3>
+              <p>操作系統 / 線程與共享資源</p>
+            </div>
+            <div class="trace-copy">
+              <p>不是把鎖加得越多越安全，而是先劃清誰擁有狀態。</p>
+              <p class="trace-link">→ 後來落在 Blob Arena 的線程封閉與有界佇列。</p>
+            </div>
+          </article>
+
+          <article class="trace-row reveal">
+            <p class="trace-index">02</p>
+            <div class="trace-title">
+              <h3>協議的邊界</h3>
+              <p>計算機網絡 / TCP 與 WebSocket</p>
+            </div>
+            <div class="trace-copy">
+              <p>TCP 是字節流，消息邊界不能靠猜，必須由協議明確定義。</p>
+              <p class="trace-link">→ 後來落在自定義二進制包頭與粘包、半包處理。</p>
+            </div>
+          </article>
+
+          <article class="trace-row reveal">
+            <p class="trace-index">03</p>
+            <div class="trace-title">
+              <h3>變更的邊界</h3>
+              <p>資料庫原理 / 事務與一致性</p>
+            </div>
+            <div class="trace-copy">
+              <p>能回退的變更，才值得放心上線。</p>
+              <p class="trace-link">→ 後來落在 StoryForge 的資料庫遷移與失敗處理。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-systems" id="systems">
+      <div class="page-shell">
+        <header class="section-heading section-heading--light reveal">
+          <p class="section-number">02 / 系統</p>
+          <div>
+            <p class="section-kicker">TRACES IN THE BUILD</p>
+            <h2>不是展示做完的結果，<br>而是留下做法的轉折。</h2>
+          </div>
+        </header>
+
+        <article class="project reveal">
+          <header class="project-header">
+            <div>
+              <p class="project-number">SYSTEM 01 / 2026</p>
+              <h3>Blob Arena</h3>
+            </div>
+            <p class="project-meta">C++17 · WebSocket · Docker<br>AI 協作開發</p>
+          </header>
+
+          <div class="project-intro">
+            <p class="project-lead">
+              一個可在瀏覽器直接進入的 4 人即時競技服務端。
+              我使用 AI 編程工具協作完成，並持續整理需求、驗證行為與收斂架構。
+            </p>
+            <p class="project-aside">
+              AI 負責快速生成初稿；<br>
+              但什麼值得信任，仍要由測試、運行結果與邊界來回答。
+            </p>
+          </div>
+
+          <div class="project-media-grid">
+            <figure class="project-shot project-shot--game">
+              <img
+                src="./assets/project-blob-arena.png"
+                alt="Blob Arena 實際運行中的 4 人即時對局畫面"
+                width="1440"
+                height="900"
+              >
+              <figcaption>
+                <span>實際運行畫面</span>
+                <span>本地服務端 · 4 人對局 · 60 FPS</span>
+              </figcaption>
+            </figure>
+
+            <figure class="project-sketch project-sketch--image">
+              <a
+                class="sketch-link"
+                href="./assets/project-blob-message-journey.png"
+                target="_blank"
+                rel="noopener"
+                aria-label="查看 Blob Arena 完整消息旅程概念圖"
+              >
+                <img
+                  src="./assets/project-blob-message-journey.png"
+                  alt="Blob Arena 從瀏覽器輸入到服務端模擬再回到畫面的消息旅程概念圖"
+                  width="2400"
+                  height="1400"
+                >
+                <span class="sketch-open">查看完整概念圖 ↗</span>
+              </a>
+              <figcaption>
+                <span>系統概念圖</span>
+                <span>一條輸入消息如何穿過 I/O、佇列與 Room Worker</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="compare reveal" data-compare>
+            <div class="compare-head">
+              <p class="compare-label">RUNTIME / 版本對照</p>
+              <div class="compare-tabs" role="tablist" aria-label="Blob Arena 版本對照">
+                <button
+                  class="compare-tab"
+                  id="tab-initial"
+                  type="button"
+                  role="tab"
+                  aria-selected="false"
+                  aria-controls="panel-initial"
+                  data-view="initial"
+                >
+                  初次公開
+                </button>
+                <button
+                  class="compare-tab is-active"
+                  id="tab-current"
+                  type="button"
+                  role="tab"
+                  aria-selected="true"
+                  aria-controls="panel-current"
+                  data-view="current"
+                >
+                  現在版本
+                </button>
+              </div>
+            </div>
+
+            <div class="compare-panels">
+              <section
+                class="compare-panel"
+                id="panel-initial"
+                role="tabpanel"
+                aria-labelledby="tab-initial"
+                data-panel="initial"
+                hidden
+              >
+                <p class="version-stamp">2026.09 / INITIAL PUBLIC RELEASE</p>
+                <h4>先把世界跑起來</h4>
+                <p>
+                  初次公開版本先完成可運行的多人即時對局，
+                  讓網路、房間與遊戲規則形成一條完整鏈路。
+                </p>
+                <div class="version-diagram" aria-label="初次公開版本流程">
+                  <span>Browser</span>
+                  <b>→</b>
+                  <span>WebSocket</span>
+                  <b>→</b>
+                  <span>Game Logic</span>
+                </div>
+              </section>
+
+              <section
+                class="compare-panel"
+                id="panel-current"
+                role="tabpanel"
+                aria-labelledby="tab-current"
+                data-panel="current"
+              >
+                <p class="version-stamp">2026.11 / REFINED RUNTIME</p>
+                <h4>再讓邊界值得信任</h4>
+                <p>
+                  後續整理把網路、遊戲邏輯與跨線程通信拆開。
+                  I/O 與房間邏輯不再直接共享狀態，失敗和背壓也有了明確位置。
+                </p>
+                <div class="version-diagram version-diagram--stacked" aria-label="現在版本架構">
+                  <span>I/O Reactor</span>
+                  <b>→</b>
+                  <span>Bounded Queue</span>
+                  <b>→</b>
+                  <span>Room Worker</span>
+                </div>
+              </section>
+            </div>
+
+            <p class="compare-caption">
+              Git 留下了兩個清楚節點：<span>2026.09 Initial public release</span>
+              到 <span>2026.11 refine game runtime and development workflow</span>。
+            </p>
+          </div>
+
+          <aside class="evidence-line">
+            <p class="evidence-source">src/concurrency/bounded_queue.h</p>
+            <blockquote>跨線程只傳小值，不傳指針。</blockquote>
+            <p>先把共享的機會拿掉，再談鎖與性能。</p>
+          </aside>
+        </article>
+
+        <article class="project project--story reveal">
+          <header class="project-header">
+            <div>
+              <p class="project-number">SYSTEM 02 / 2026</p>
+              <h3>StoryForge</h3>
+            </div>
+            <p class="project-meta">Node.js · MySQL · DeepSeek<br>後端 AI 故事模組</p>
+          </header>
+
+          <div class="project-intro">
+            <p class="project-lead">
+              四人團隊協作的故事創作平台，我負責後端 AI 故事相關的一部分。
+              這裡留下的痕跡，不是「接入了模型」，而是如何約束一個不穩定的生成過程。
+            </p>
+            <p class="project-aside">
+              模型負責生成，系統負責驗證。<br>
+              不合格時重試，沒有依據時明確失敗。
+            </p>
+          </div>
+
+          <div class="project-media-grid">
+            <figure class="project-shot project-shot--story">
+              <img
+                src="./assets/project-story-workshop-ui.png"
+                alt="StoryForge AI 故事工坊的實際前端界面"
+                width="1440"
+                height="820"
+              >
+              <figcaption>
+                <span>實際前端界面</span>
+                <span>AI 故事工坊 · 規則書配置流程</span>
+              </figcaption>
+            </figure>
+
+            <figure class="project-sketch project-sketch--flow">
+              <p class="sketch-topline">SYSTEM SKETCH / AI STORY PIPELINE</p>
+              <div class="sketch-flow" aria-label="AI 故事後端資料流概念圖">
+                <span class="sketch-node">RULEBOOK</span>
+                <span class="sketch-arrow" aria-hidden="true">→</span>
+                <span class="sketch-node">SESSION</span>
+                <span class="sketch-arrow" aria-hidden="true">→</span>
+                <span class="sketch-node">DEEPSEEK</span>
+                <span class="sketch-arrow" aria-hidden="true">→</span>
+                <span class="sketch-node sketch-node--accent">VALIDATE</span>
+              </div>
+              <p class="sketch-loop">
+                非法輸出 → 最多重試兩次 → 明確失敗，不用假內容補位
+              </p>
+              <p class="sketch-source">
+                根據 <code>backend/routes/aiStory.js</code> 的真實流程整理
+              </p>
+              <figcaption>
+                <span>概念草圖</span>
+                <span>生成、解析、驗證與失敗邊界</span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <div class="ai-flow" aria-label="AI 故事後端流程">
+            <div class="flow-step">
+              <span>01</span>
+              <p>規則書</p>
+            </div>
+            <div class="flow-step">
+              <span>02</span>
+              <p>故事會話</p>
+            </div>
+            <div class="flow-step">
+              <span>03</span>
+              <p>DeepSeek 生成</p>
+            </div>
+            <div class="flow-step">
+              <span>04</span>
+              <p>JSON 解析</p>
+            </div>
+            <div class="flow-step">
+              <span>05</span>
+              <p>驗證 / 重試</p>
+            </div>
+          </div>
+
+          <div class="story-traces">
+            <div>
+              <p class="story-label">產出順序</p>
+              <p>先把分支選項完整輸出，再寫長篇正文，避免截斷後故事卡死。</p>
+            </div>
+            <div>
+              <p class="story-label">失敗邊界</p>
+              <p>重試兩次仍不合格就明確報錯，不用假選項製造「看起來成功」。</p>
+            </div>
+            <div>
+              <p class="story-label">持續修正</p>
+              <p>從路由結構、JSON 解析到限制查詢，都留下了逐項修正的提交記錄。</p>
+            </div>
+          </div>
+
+          <aside class="evidence-line evidence-line--story">
+            <p class="evidence-source">backend/routes/aiStory.js</p>
+            <blockquote>絕不填充假選項兜底。</blockquote>
+            <p>可靠性不是讓系統永遠說成功，而是讓失敗停在可處理的位置。</p>
+          </aside>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-direction" id="direction">
+      <div class="page-shell direction-grid">
+        <p class="section-number reveal">03 / 去向</p>
+        <div class="direction-copy">
+          <p class="section-kicker reveal">WHY BOC MACAU</p>
+          <h2 class="reveal">我想在一個<br>「不能只看起來能跑」<br>的地方做技術。</h2>
+          <p class="direction-lead reveal">
+            澳門中銀的資訊科技崗不只是開發，還包括需求、測試、投產、維護與故障跟進。
+            這和我做項目時關注可驗證、可維護的習慣一致。
+          </p>
+          <p class="direction-note reveal">
+            我願意從基礎工作做起，在澳門長期發展。<br>
+            不是把銀行當作技術的終點，而是把技術放進更長期的責任裡。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-shell footer-grid">
+      <p>個人面試補充材料 · 非中國銀行官方頁面</p>
+      <p>WORKING TRACES / 2026</p>
+    </div>
+  </footer>
+
+  <noscript>
+    <p class="noscript-note">此頁面的版本對照需要 JavaScript；其餘內容可直接閱讀。</p>
+  </noscript>
+  <script src="./app.js" defer></script>
+</body>
+</html>
